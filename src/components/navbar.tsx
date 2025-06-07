@@ -1,9 +1,11 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 export const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <motion.nav
-      className="bg-gray-500/40 text-white bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-50 backdrop-contrast-100 p-4 m-5 top-0 left-0 right-0 z-50 rounded-4xl fixed w-fit mx-auto px-8 overflow-hidden"
+      className="bg-gradient-to-b from-gray-800/60 to-gray-900/60 text-white bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-50 backdrop-contrast-100 p-4 m-5 top-0 left-0 right-0 z-50 rounded-4xl fixed w-fit mx-auto px-8"
       initial={{ opacity: 0, width: "fit-content" }}
       animate={{ opacity: 1, width: "fit-content" }}
       transition={{
@@ -11,7 +13,7 @@ export const Navbar = () => {
         width: { duration: 0.8, delay: 1 },
       }}
     >
-      <div className="flex items-center gap-10">
+      <div className="flex items-center gap-10 relative">
         {/* Nombre sin animación */}
         <div
           className="text-2xl font-bold whitespace-nowrap  bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-400 cursor-pointer"
@@ -20,9 +22,39 @@ export const Navbar = () => {
           MARIO SALAZAR
         </div>
 
+        <button
+          className="md:hidden flex items-center"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
+        >
+          <svg
+            className="w-6 h-6 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            {isOpen ? (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            )}
+          </svg>
+        </button>
+
         {/* Resto del contenido */}
         <motion.div
-          className="flex items-center gap-10"
+          className="hidden md:flex items-center gap-10"
           initial={{ opacity: 0, x: 20, width: 0, pointerEvents: "none" }}
           animate={{ opacity: 1, x: 0, width: "auto", pointerEvents: "auto" }}
           exit={{ opacity: 0, x: 20, width: 0, pointerEvents: "none" }}
@@ -104,6 +136,72 @@ export const Navbar = () => {
             </a>
           </div>
         </motion.div>
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="absolute top-full left-0 mt-4 w-full bg-gradient-to-b from-gray-900 to-gray-950 rounded-xl p-6 flex flex-col gap-6 shadow-xl md:hidden z-50 border border-gray-700 backdrop-blur-md"
+            >
+              <ul className="flex flex-col gap-3 text-white font-semibold text-lg">
+                <li>
+                  <a
+                    href="#about"
+                    className="hover:text-indigo-400 transition-colors duration-200"
+                  >
+                    Sobre mí
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#skills"
+                    className="hover:text-indigo-400 transition-colors duration-200"
+                  >
+                    Habilidades
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#projects"
+                    className="hover:text-indigo-400 transition-colors duration-200"
+                  >
+                    Proyectos
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    className="hover:text-indigo-400 transition-colors duration-200"
+                  >
+                    Contacto
+                  </a>
+                </li>
+              </ul>
+              <div className="flex justify-start gap-5 text-2xl">
+                <a
+                  href="https://github.com/M4rio1"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-gray-300 hover:text-white transition-colors duration-200"
+                >
+                  {/* GitHub SVG o ícono */}
+                  <i className="fab fa-github"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/mario-salazar..."
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-gray-300 hover:text-white transition-colors duration-200"
+                >
+                  {/* LinkedIn SVG o ícono */}
+                  <i className="fab fa-linkedin"></i>
+                </a>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </motion.nav>
   );

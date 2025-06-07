@@ -2,21 +2,21 @@ import { HoverEffect } from "./ui/card-hover-effect";
 
 const projects = [
   {
-    image: "/websites/digitalarchweb.png",
+    image: "/mario-salazar/websites/digitalarchweb.png",
     title: "DIGITAL ARCH",
     description:
       "Un sitio web corporativo que ofrece servicios de desarrollo web, destacando proyectos innovadores y modernos.",
     link: "https://digitalarchgt.com",
   },
   {
-    image: "/websites/samultiserviciosweb.png",
+    image: "/mario-salazar/websites/samultiserviciosweb.png",
     title: "SA MULTISERVICIOS",
     description:
       "Un sitio web corporativo que ofrece servicios de asesoria contable y fiscal en guatemala, hecho con un diseño moderno y atractivo.",
     link: "https://samultiservicios.com",
   },
   {
-    image: "/websites/eklipsseweb.png",
+    image: "/mario-salazar/websites/eklipsseweb.png",
     title: "EKLIPSSE",
     description:
       "Un sitio e-commerce que ofrece una amplia gama de productos de belleza y cuidado personal, con un diseño atractivo y funcional.",

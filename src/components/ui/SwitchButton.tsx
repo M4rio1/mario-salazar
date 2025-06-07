@@ -9,7 +9,7 @@ const Switch = () => {
       // Esperamos a que la animación termine (3.5s como tu CSS)
       setTimeout(() => {
         const link = document.createElement("a");
-        link.href = "/cv_Mario_Salazar.pdf"; // Asegúrate de tenerlo en public/ o con ruta correcta
+        link.href = "/mario-salazar/cv_Mario_Salazar.pdf"; // Asegúrate de tenerlo en public/ o con ruta correcta
         link.download = "cv_Mario_Salazar.pdf";
         document.body.appendChild(link);
         link.click();
