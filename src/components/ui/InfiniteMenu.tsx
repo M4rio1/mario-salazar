@@ -546,7 +546,6 @@ class ArcballControl {
   private _combinedQuat = quat.create();
 
   private readonly EPSILON = 0.1;
-  private readonly IDENTITY_QUAT = quat.create();
 
   constructor(canvas: HTMLCanvasElement, updateCallback?: UpdateCallback) {
     this.canvas = canvas;
@@ -790,7 +789,7 @@ class InfiniteGridMenu {
   constructor(
     private canvas: HTMLCanvasElement,
     private items: MenuItem[],
-    private onActiveItemChange: ActiveItemCallback,
+    _onActiveItemChange: ActiveItemCallback,
     private onMovementChange: MovementChangeCallback,
     onInit?: InitCallback
   ) {
@@ -1211,15 +1210,6 @@ class InfiniteGridMenu {
       (cameraTargetZ - this.camera.position[2]) / damping;
     this.updateCameraMatrix();
   }
-
-  private getVertexWorldPosition(index: number): vec3 {
-    const nearestVertexPos = this.instancePositions[index];
-    return vec3.transformQuat(
-      vec3.create(),
-      nearestVertexPos,
-      this.control.orientation
-    );
-  }
 }
 
 // -------- Default Items --------
@@ -1240,8 +1230,8 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [] }) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(
     null
   ) as MutableRefObject<HTMLCanvasElement | null>;
-  const [activeItem, setActiveItem] = useState<MenuItem | null>(null);
-  const [isMoving, setIsMoving] = useState<boolean>(false);
+  const [_activeItem, setActiveItem] = useState<MenuItem | null>(null);
+  const [_isMoving, setIsMoving] = useState<boolean>(false);
 
   useEffect(() => {
     const canvas = canvasRef.current;
