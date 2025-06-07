@@ -1,6 +1,7 @@
 import { SparklesCore } from "../components/ui/sparkles";
 import Switch from "../components/ui/SwitchButton";
 import { CardBody, CardContainer, CardItem } from "../components/ui/3d-card";
+import { ShootingStars } from "./ui/ShootingStar";
 
 export const Hero = () => {
   return (
@@ -13,22 +14,32 @@ export const Hero = () => {
           minSize={0.6}
           maxSize={1.4}
           particleDensity={30}
-          className="w-full h-full"
+          className="w-full h-full fixed "
           particleColor="#FFFFFF"
         />
+        <ShootingStars />
       </div>
 
       {/* 🌍 Planeta visible debajo */}
       <div className="absolute inset-0 z-0 [background:radial-gradient(200%_100%_at_50%_130%,#000_0%,#000_47%,#fff_47.2%,#63e_50%,#020617_65%,#000_90%)]"></div>
 
       <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 relative z-10 w-full h-full max-w-[1400px] mx-auto">
-        <div className="">
+        <div className="relative">
           <div className="flex items-center justify-center h-full">
             <CardContainer className="inter-var">
               <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
+                <CardItem translateZ="100" className="w-full mt-4">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/6/61/Fotograf%C3%ADa_tipo_carnet.jpg"
+                    height="1000"
+                    width="1000"
+                    className="h-90 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                    alt="thumbnail"
+                  />
+                </CardItem>
                 <CardItem
                   translateZ="50"
-                  className="text-xl font-bold text-white"
+                  className="text-xl font-bold text-white mt-4"
                 >
                   Mario David Salazar Melgar
                 </CardItem>
@@ -39,22 +50,13 @@ export const Hero = () => {
                 >
                   Desarrollador WEB
                 </CardItem>
-                <CardItem translateZ="100" className="w-full mt-4">
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/6/61/Fotograf%C3%ADa_tipo_carnet.jpg"
-                    height="1000"
-                    width="1000"
-                    className="h-90 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-                    alt="thumbnail"
-                  />
-                </CardItem>
               </CardBody>
             </CardContainer>
           </div>
         </div>
         <div className="flex items-center justify-center h-full">
           <div className="bg-gray-500/10 bg-clip-padding backdrop-filter  backdrop-blur bg-opacity-10 backdrop-saturate-50 backdrop-contrast-100 rounded-2xl p-8 md:p-16 shadow-xl">
-            <h1 className="text-4xl md:text-5xl text-white font-bold mb-3">
+            <h1 className="text-4xl md:text-4xl text-white font-bold mb-3">
               <span className="inline-flex items-center w-8 h-8 mr-2">
                 <svg
                   id="Layer_1"
@@ -86,10 +88,10 @@ export const Hero = () => {
               </span>{" "}
               Mario David Salazar
             </h1>
-            <h2 className="text-2xl md:text-3xl text-gray-300 font-bold mb-4">
+            <h2 className="text-2xl md:text-2xl text-gray-300 font-bold mb-4">
               Desarrollador WEB
             </h2>
-            <p className="text-lg md:text-xl text-gray-300 mb-8">
+            <p className="text-lg md:text-lg text-gray-300 mb-8">
               Soy un apasionado desarrollador web con experiencia en la creación
               de aplicaciones modernas y eficientes. Me encanta trabajar con
               tecnologías como React, TypeScript y Node.js para construir

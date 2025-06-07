@@ -1,162 +1,161 @@
+import InfiniteMenu from "./ui/InfiniteMenu";
+
 export const Skills = () => {
+  const items = [
+    {
+      image:
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg",
+    },
+    {
+      image:
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
+    },
+    {
+      image:
+        "https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/tailwindcss/tailwindcss-original.svg",
+    },
+    {
+      image:
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg",
+    },
+    {
+      image:
+        "https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/css3/css3-original.svg",
+    },
+    {
+      image:
+        "https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/html5/html5-original.svg",
+    },
+    {
+      image:
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg",
+    },
+    {
+      image:
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg",
+    },
+    {
+      image:
+        "https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/javascript/javascript-plain.svg",
+    },
+    {
+      image:
+        "https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/json/json-original.svg",
+    },
+    {
+      image:
+        "https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/linux/linux-original.svg ",
+    },
+    {
+      image:
+        "https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/mysql/mysql-original-wordmark.svg",
+    },
+    {
+      image:
+        "https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/nextjs/nextjs-original.svg",
+    },
+    {
+      image:
+        "https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/nginx/nginx-original.svg",
+    },
+    {
+      image:
+        "https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/sequelize/sequelize-original.svg",
+    },
+    {
+      image:
+        "https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/vitejs/vitejs-original.svg",
+    },
+    {
+      image:
+        "https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/postman/postman-original.svg",
+    },
+    {
+      image:
+        "https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/docker/docker-original.svg",
+    },
+  ];
   return (
     <section
       id="skills"
-      className="bg-black max-w-5xl mx-auto px-6 py-24 text-white"
+      className="bg-black max-w-7xl mx-auto px-6 py-24 text-white flex flex-col items-center gap-8"
       aria-labelledby="skills-title"
     >
-      <div className="flex flex-col md:flex-row items-center md:items-start gap-14">
-        {/* Foto con borde sutil */}
-        <div className="flex-shrink-0 w-48 h-48 rounded-full overflow-hidden border-2 border-gray-700 shadow-lg">
-          <img
-            src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80"
-            alt="Foto de perfil"
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </div>
-
-        {/* Texto */}
-        <div className="max-w-xl text-center md:text-left">
+      <div className="w-full px-4 py-12">
+        <div className="mb-12 text-center">
           <h2
             id="skills-title"
-            className="text-4xl font-extrabold mb-6 tracking-tight text-white drop-shadow-md"
+            className="text-3xl md:text-4xl font-bold text-white"
           >
-            Habilidades
+            Mis habilidades técnicas
           </h2>
-          <p className="text-lg text-gray-300 mb-6">
-            Aquí están algunas de las habilidades que he adquirido a lo largo de
-            mi carrera como desarrollador web.
-          </p>
-          <ul className="flex flex-col gap-4 md:flex-row">
-            <li className="flex items-center gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="feather feather-code"
-              >
-                <path d="M16 18l2-2V6l-2-2"></path>
-                <path d="M6 18V6l2-2"></path>
-              </svg>
-              <span>HTML</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="feather feather-code"
-              >
-                <path d="M16 18l2-2V6l-2-2"></path>
-                <path d="M6 18V6l2-2"></path>
-              </svg>
-              <span>CSS</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="feather feather-code"
-              >
-                <path d="M16 18l2-2V6l-2-2"></path>
-                <path d="M6 18V6l2-2"></path>
-              </svg>
-              <span>JavaScript</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="feather feather-code"
-              >
-                <path d="M16 18l2-2V6l-2-2"></path>
-                <path d="M6 18V6l2-2"></path>
-              </svg>
-              <span>React</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="feather feather-code"
-              >
-                <path d="M16 18l2-2V6l-2-2"></path>
-                <path d="M6 18V6l2-2"></path>
-              </svg>
-              <span>Node.js</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="feather feather-code"
-              >
-                <path d="M16 18l2-2V6l-2-2"></path>
-                <path d="M6 18V6l2-2"></path>
-              </svg>
-              <span>TypeScript</span>
-            </li>
-            <li>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="feather feather-code"
-              >
-                <path d="M16 18l2-2V6l-2-2"></path>
-                <path d="M6 18V6l2-2"></path>
-              </svg>
-              <span>Node.js</span>
-            </li>
-          </ul>
         </div>
+
+        <div className="flex flex-col gap-10">
+          {/* Frontend */}
+          <div>
+            <h3 className="text-xl font-semibold text-white mb-4">Frontend</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+              {[
+                "HTML5",
+                "CSS3",
+                "JavaScript",
+                "React",
+                "TypeScript",
+                "TailwindCSS",
+              ].map((skill) => (
+                <p
+                  key={skill}
+                  className="text-center text-gray-400 bg-white/5 rounded-md py-2"
+                >
+                  {skill}
+                </p>
+              ))}
+            </div>
+          </div>
+
+          {/* Backend */}
+          <div>
+            <h3 className="text-xl font-semibold text-white mb-4">Backend</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+              {[
+                "Node.js",
+                "Express.js",
+                "MySQL",
+                "Sequelize",
+                "PostgreSQL",
+              ].map((skill) => (
+                <p
+                  key={skill}
+                  className="text-center text-gray-400 bg-white/5 rounded-md py-2"
+                >
+                  {skill}
+                </p>
+              ))}
+            </div>
+          </div>
+
+          {/* Adicional */}
+          <div>
+            <h3 className="text-xl font-semibold text-white mb-4">Adicional</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+              {["UX/UI", "REST API", "SEO", "Github", "Docker", "..."].map(
+                (skill) => (
+                  <p
+                    key={skill}
+                    className="text-center text-gray-400 bg-white/5 rounded-md py-2"
+                  >
+                    {skill}
+                  </p>
+                )
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style={{ height: "600px", position: "relative" }}>
+        <InfiniteMenu items={items} />
       </div>
     </section>
   );

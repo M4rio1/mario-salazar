@@ -13,8 +13,11 @@ export const Navbar = () => {
     >
       <div className="flex items-center gap-10">
         {/* Nombre sin animación */}
-        <div className="text-2xl font-bold whitespace-nowrap">
-          Mario Salazar
+        <div
+          className="text-2xl font-bold whitespace-nowrap  bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-400 cursor-pointer"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          MARIO SALAZAR
         </div>
 
         {/* Resto del contenido */}
@@ -26,20 +29,20 @@ export const Navbar = () => {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
           style={{ overflow: "hidden" }}
         >
-          <ul className="flex space-x-6 text-white font-medium whitespace-nowrap">
+          <ul className="flex space-x-6 text-white font-semibold whitespace-nowrap">
             <li>
               <a href="#about" className="hover:text-indigo-400">
                 Sobre mí
               </a>
             </li>
             <li>
-              <a href="#projects" className="hover:text-indigo-400">
-                Proyectos
+              <a href="#skills" className="hover:text-indigo-400">
+                Habilidades
               </a>
             </li>
             <li>
-              <a href="#skills" className="hover:text-indigo-400">
-                Habilidades
+              <a href="#projects" className="hover:text-indigo-400">
+                Proyectos
               </a>
             </li>
             <li>

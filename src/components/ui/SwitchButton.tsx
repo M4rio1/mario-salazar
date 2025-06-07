@@ -1,11 +1,32 @@
+import { useRef } from "react";
 import styled from "styled-components";
 
 const Switch = () => {
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const handleDownload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.checked) {
+      // Esperamos a que la animación termine (3.5s como tu CSS)
+      setTimeout(() => {
+        const link = document.createElement("a");
+        link.href = "/cv_Mario_Salazar.pdf"; // Asegúrate de tenerlo en public/ o con ruta correcta
+        link.download = "cv_Mario_Salazar.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }, 1500); // coincidir con animación `showInstalledMessage`
+    }
+  };
   return (
     <StyledWrapper>
       <div className="container">
         <label className="label">
-          <input type="checkbox" className="input" />
+          <input
+            ref={inputRef}
+            type="checkbox"
+            className="input"
+            onChange={handleDownload}
+          />
           <span className="circle">
             <svg
               className="icon"
@@ -25,7 +46,7 @@ const Switch = () => {
             <div className="square" />
           </span>
           <p className="title">Descargar CV</p>
-          <p className="title">Abrir</p>
+          <p className="title">Listo</p>
         </label>
       </div>
     </StyledWrapper>
@@ -143,30 +164,23 @@ const StyledWrapper = styled.div`
 
   .label:has(.input:checked) {
     width: 57px;
-    animation: installed 0.4s ease 3.5s forwards;
+    animation: installed 0.2s ease 1.5s forwards;
   }
 
   .label:has(.input:checked)::before {
-    animation: rotate 3s ease-in-out 0.4s forwards;
+    animation: rotate 1s ease-in-out 0.2s forwards;
   }
 
   .label .input:checked + .circle {
-    animation: pulse 1s forwards, circleDelete 0.2s ease 3.5s forwards;
-    rotate: 180deg;
+    animation: pulse 0.6s forwards, circleDelete 0.2s ease 1.5s forwards;
   }
 
   .label .input:checked + .circle::before {
-    animation: installing 3s ease-in-out forwards;
+    animation: installing 1.3s ease-in-out forwards;
   }
 
-  .label .input:checked + .circle .icon {
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  .label .input:checked ~ .circle .square {
-    opacity: 1;
-    visibility: visible;
+  .label .input:checked ~ .title:last-child {
+    animation: showInstalledMessage 0.4s ease 1.5s forwards;
   }
 
   .label .input:checked ~ .title {
@@ -175,7 +189,7 @@ const StyledWrapper = styled.div`
   }
 
   .label .input:checked ~ .title:last-child {
-    animation: showInstalledMessage 0.4s ease 3.5s forwards;
+    animation: showInstalledMessage 0.4s ease 1.5s forwards;
   }
 
   @keyframes pulse {

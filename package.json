@@ -10,18 +10,23 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-three/drei": "^10.1.2",
+    "@react-three/fiber": "^9.1.2",
     "@tailwindcss/vite": "^4.1.8",
     "@tsparticles/engine": "^3.8.1",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.8.1",
     "clsx": "^2.1.1",
+    "gl-matrix": "^3.4.3",
     "motion": "^12.15.0",
+    "postprocessing": "^6.37.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.1",
     "styled-components": "^6.1.18",
     "tailwind-merge": "^3.3.0",
-    "tailwindcss": "^4.1.8"
+    "tailwindcss": "^4.1.8",
+    "three": "^0.177.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
