@@ -26,7 +26,7 @@ export const Contact = () => {
       ></motion.div>
 
       {/* Contenido con efecto glass */}
-      <div className="relative z-10 bg-white/10 max-w-7xl mx-auto backdrop-blur-md bg-opacity-10 rounded-2xl p-10 md:p-16 shadow-2xl border border-white/10">
+      <div className="relative z-10 max-w-7xl mx-auto bg-gray-800/20 bg-clip-padding backdrop-filter  backdrop-blur bg-opacity-10 backdrop-saturate-50 backdrop-contrast-100 rounded-2xl p-10 md:p-16 shadow-2xl border border-white/10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
           {/* Texto lado izquierdo */}
           <div className="space-y-4">
@@ -40,7 +40,7 @@ export const Contact = () => {
               ¿Tienes un proyecto en mente o deseas colaborar? Estoy disponible
               para nuevas oportunidades.
             </p>
-            <div className="mt-6 space-x-4">
+            <div className="mt-6 space-x-4 flex md:flex-row flex-col">
               <a
                 href="mailto:mario.salazar@digitalarchgt.com"
                 className="text-blue-400 hover:underline"

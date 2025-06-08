@@ -7,7 +7,6 @@ import { CardEffect } from "./ui/cardEffect";
 export const Hero = () => {
   return (
     <div className="relative w-full min-h-screen overflow-hidden flex justify-center items-center">
-      {/* ✨ Partículas, arriba pero enmascaradas */}
       <div className="absolute inset-0 z-10 w-full min-h-screen pointer-events-none [mask-image:radial-gradient(200%_100%_at_50%_120%,transparent_0%,transparent_47%,black_50%,black_100%)] [mask-mode:alpha]">
         <SparklesCore
           id="tsparticlesfullpage"
@@ -20,18 +19,16 @@ export const Hero = () => {
         />
         <ShootingStars />
       </div>
-
-      {/* 🌍 Planeta visible debajo */}
+      {/* 🌍 Planeta visible debajo */}.
       <div className="absolute inset-0 z-0 [background:radial-gradient(200%_100%_at_50%_130%,#000_0%,#000_47%,#fff_47.2%,#63e_50%,#020617_65%,#000_90%)]"></div>
-
       <div className="grid lg:grid-cols-2 gap-8 relative z-10 w-full h-full max-w-[1500px] mx-auto px-6 py-26">
         <div className="relative">
           <div className="flex items-center justify-center h-full">
             <CardContainer className="inter-var">
-              <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
+              <CardBody className="relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
                 <CardItem translateZ="100" className="w-full mt-4">
                   <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/6/61/Fotograf%C3%ADa_tipo_carnet.jpg"
+                    src="/mario-salazar/mariosalazarm.png"
                     height="1000"
                     width="1000"
                     className="h-90 w-full object-cover rounded-xl group-hover/card:shadow-xl"
@@ -58,7 +55,7 @@ export const Hero = () => {
 
         <CardEffect>
           <div className="flex items-center justify-center h-full">
-            <div className="bg-gray-800/20 bg-clip-padding backdrop-filter  backdrop-blur bg-opacity-10 backdrop-saturate-50 backdrop-contrast-100 rounded-2xl p-8 md:p-16 shadow-xl">
+            <div className="bg-gray-800/40 bg-clip-padding backdrop-filter  backdrop-blur bg-opacity-10 backdrop-saturate-50 backdrop-contrast-100 rounded-2xl p-8 md:p-16 shadow-xl">
               <h1 className="text-4xl md:text-4xl text-white font-bold mb-3">
                 <span className="inline-flex items-center w-8 h-8 mr-2">
                   <svg

@@ -134,7 +134,10 @@ export const CardItem = ({
   return (
     <Tag
       ref={ref}
-      className={cn("w-fit transition duration-200 ease-linear", className)}
+      className={cn(
+        "w-fit transition duration-200 ease-linear mx-auto",
+        className
+      )}
       {...rest}
     >
       {children}

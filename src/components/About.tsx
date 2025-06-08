@@ -17,8 +17,7 @@ export const About = () => {
 
           <p className="text-gray-300 text-lg leading-relaxed mb-6">
             Soy un desarrollador web fullstack apasionado por crear experiencias
-            digitales limpias, intuitivas y eficientes. Con más de{" "}
-            <strong>X años de experiencia</strong>, me especializo en
+            digitales limpias, intuitivas y eficientes. Me especializo en
             transformar ideas complejas en soluciones elegantes y funcionales.
           </p>
 
