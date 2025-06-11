@@ -7,7 +7,7 @@ export const About = () => {
     >
       <div className="flex flex-col md:flex-row items-center md:items-start gap-14">
         {/* Texto */}
-        <div className="max-w-xl text-center md:text-left">
+        <div className="max-w-3xl text-center md:text-left">
           <h2
             id="about-title"
             className="text-4xl font-extrabold mb-6 tracking-tight text-white drop-shadow-md"
@@ -16,16 +16,17 @@ export const About = () => {
           </h2>
 
           <p className="text-gray-300 text-lg leading-relaxed mb-6">
-            Soy un desarrollador web fullstack apasionado por crear experiencias
-            digitales limpias, intuitivas y eficientes. Me especializo en
-            transformar ideas complejas en soluciones elegantes y funcionales.
+            Soy un desarrollador web fullstack con experiencia en la creación de
+            aplicaciones web modernas, enfocadas en el rendimiento, la
+            escalabilidad y la experiencia del usuario. Trabajo con tecnologías
+            como TypeScript, React, Node.js y bases de datos relacionales, lo
+            que me permite construir soluciones completas de principio a fin.
           </p>
 
           <p className="text-gray-400 text-base leading-relaxed">
             Mi enfoque combina diseño minimalista y código limpio para entregar
-            productos escalables que superan las expectativas. Disfruto trabajar
-            en equipos colaborativos y siempre busco aprender nuevas tecnologías
-            y mejores prácticas.
+            productos escalables, con una experiencia de usuario atractiva y un
+            diseño espectacular.
           </p>
         </div>
       </div>

@@ -92,11 +92,11 @@ export const Hero = () => {
                 Desarrollador WEB
               </h2>
               <p className="text-lg md:text-lg text-gray-300 mb-8">
-                Soy un apasionado desarrollador web con experiencia en la
-                creación de aplicaciones modernas y eficientes. Me encanta
-                trabajar con tecnologías como React, TypeScript y Node.js para
-                construir soluciones innovadoras que mejoren la experiencia del
-                usuario.
+                Soy desarrollador web fullstack con pasión por crear
+                aplicaciones modernas, eficientes y centradas en el usuario. Me
+                especializo en el desarrollo de soluciones completas, desde el
+                frontend atractivo y funcional hasta el backend sólido y
+                escalable.
               </p>
               <div className="relative z-10 pointer-events-auto">
                 <Switch />
