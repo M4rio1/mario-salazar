@@ -23,16 +23,21 @@ function App() {
   }, []);
   return (
     <>
-      {isLoading && <InitialLayer />}
-      <Navbar />
-      <ScrollIndicator />
-      <div className="bg-black">
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
-      </div>
+      {isLoading ? (
+        <InitialLayer />
+      ) : (
+        <div className="overflow-hidden">
+          <Navbar />
+          <ScrollIndicator />
+          <div className="bg-black">
+            <Hero />
+            <About />
+            <Skills />
+            <Projects />
+            <Contact />
+          </div>
+        </div>
+      )}
     </>
   );
 }

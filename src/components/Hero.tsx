@@ -117,7 +117,7 @@ export const Hero = () => {
             </div>
           </div>
         </CardEffect>
-        <div className="relative">
+        <div className="relative hidden lg:block">
           <div style={{ height: "400px", position: "relative" }}>
             <InfiniteMenu items={items} />
           </div>
