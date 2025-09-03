@@ -110,7 +110,7 @@ export const Navbar = () => {
             </a>
             {/* LinkedIn */}
             <a
-              href="https://www.linkedin.com/in/mario-salazar..."
+              href="https://www.linkedin.com/in/mario-d-salazar-677310271"
               target="_blank"
               rel="noreferrer"
               className="text-gray-300 hover:text-white"
@@ -190,7 +190,7 @@ export const Navbar = () => {
                   <i className="fab fa-github"></i>
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/mario-salazar..."
+                  href="https://www.linkedin.com/in/mario-d-salazar-677310271"
                   target="_blank"
                   rel="noreferrer"
                   className="text-gray-300 hover:text-white transition-colors duration-200"

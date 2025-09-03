@@ -27,12 +27,12 @@ export const Contact = () => {
 
       {/* Contenido con efecto glass */}
       <div className="relative z-10 max-w-7xl mx-auto bg-gray-800/20 bg-clip-padding backdrop-filter  backdrop-blur bg-opacity-10 backdrop-saturate-50 backdrop-contrast-100 rounded-2xl p-10 md:p-16 shadow-2xl border border-white/10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+        <div className="grid grid-cols-1 gap-10 items-center justify-center">
           {/* Texto lado izquierdo */}
-          <div className="space-y-4">
+          <div className="space-y-4 flex flex-col items-center justify-center">
             <h1
               id="contact-title"
-              className="text-4xl font-bold text-white tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400"
+              className="text-4xl font-bold text-white tracking-tight bg-clip-text  bg-gradient-to-b from-neutral-50 to-neutral-400"
             >
               Contáctame
             </h1>
@@ -48,7 +48,7 @@ export const Contact = () => {
                 mario.salazar@digitalarchgt.com
               </a>
               <a
-                href="https://linkedin.com/in/tuusuario"
+                href="https://www.linkedin.com/in/mario-d-salazar-677310271"
                 className="text-blue-400 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -57,37 +57,12 @@ export const Contact = () => {
               </a>
             </div>
           </div>
-
-          {/* Formulario lado derecho */}
-          <form className="space-y-5">
-            <input
-              type="text"
-              name="name"
-              placeholder="Tu nombre"
-              required
-              className="w-full px-4 py-3 bg-white/5 text-white placeholder-gray-400 border border-white/10 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Tu correo"
-              required
-              className="w-full px-4 py-3 bg-white/5 text-white placeholder-gray-400 border border-white/10 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-            />
-            <textarea
-              name="message"
-              placeholder="Escribe tu mensaje..."
-              required
-              className="w-full px-4 py-3 bg-white/5 text-white placeholder-gray-400 border border-white/10 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition h-32 resize-none"
-            />
-            <button
-              type="submit"
-              className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-3 rounded-md font-semibold hover:from-blue-500 hover:to-indigo-500 transition duration-300 shadow-lg shadow-blue-600/20 cursor-pointer"
-            >
-              Enviar mensaje
-            </button>
-          </form>
         </div>
+      </div>
+      <div className="flex flex-col items-center justify-center pt-16">
+        <p className="text-center text-gray-400 mt-4">
+          2025 © Mario D. Salazar - Todos los derechos reservados.
+        </p>
       </div>
     </section>
   );

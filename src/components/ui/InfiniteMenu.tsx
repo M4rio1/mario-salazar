@@ -825,7 +825,7 @@ class InfiniteGridMenu {
   private init(onInit?: InitCallback): void {
     const gl = this.canvas.getContext("webgl2", {
       antialias: true,
-      alpha: false,
+      alpha: true,
     });
     if (!gl) {
       throw new Error("No WebGL 2 context!");
@@ -1268,7 +1268,7 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [] }) => {
   }, [items]);
 
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full h-full ">
       <canvas
         id="infinite-grid-menu-canvas"
         ref={canvasRef}
