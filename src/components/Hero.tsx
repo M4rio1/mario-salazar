@@ -98,13 +98,13 @@ export const Hero = () => {
         <CardEffect>
           <div className="flex items-center justify-center h-full">
             <div className="bg-black backdrop-blur-xl rounded-2xl p-8 md:p-16 shadow-[0_0_10px_10px_rgba(235,235,235,0.1)]">
-              <h1 className="text-4xl md:text-4xl text-white font-bold mb-3">
+              <h1 className="text-3xl md:text-4xl text-white font-bold mb-3">
                 Mario David Salazar Melgar
               </h1>
-              <h2 className="text-2xl md:text-2xl text-gray-300 font-bold mb-4">
+              <h2 className="text-xl md:text-2xl text-gray-300 font-bold mb-4">
                 Desarrollador WEB
               </h2>
-              <p className="text-lg md:text-lg text-gray-300 mb-8">
+              <p className="text-md md:text-lg text-gray-300 mb-8">
                 Soy desarrollador web fullstack con pasión por crear
                 aplicaciones modernas, eficientes y centradas en el usuario. Me
                 especializo en el desarrollo de soluciones completas, desde el
